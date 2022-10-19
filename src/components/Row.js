@@ -14,7 +14,7 @@ function Row() {
 
 
   
-  let ronaldoStats = stats.filter((element) => ((element.person_id === personID) && (typeof element.season === 'string')) && filteredCompetitions.some((competition) => competition.comp_id === element.comp_id));
+  let ronaldoStats = stats.filter((element) => ((element.person_id === personID)) && filteredCompetitions.some((competition) => competition.comp_id === element.comp_id));
   let seasons = []
   for(const season of ronaldoStats) {
     seasons.push(season.season);
