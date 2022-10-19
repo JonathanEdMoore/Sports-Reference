@@ -8,6 +8,21 @@ const filteredCompetitions = competitions.filter((competition) => competition.co
 
 
 function Row() {
+  function findTeam(team_id){
+    const result = teams.find(element => element.team_id === team_id)
+    return result.name;
+  }
+  
+  function findCountry(team_id){
+    const result = teams.find(element => element.team_id === team_id)
+    return result.country;
+  }
+  
+  function findCompetition(comp_id){
+    const result = competitions.find(element => element.comp_id === comp_id)
+    return result.name;
+  }
+  
   let cristiano = people[1];
   let personID = cristiano.person_id;
   let birthyear = cristiano.birth_date.split('-')[0]
@@ -47,21 +62,6 @@ function Row() {
   let totalGoals = 0;
   let totalAssists = 0;
   let totalGoalsPer90;
-
-  function findTeam(team_id){
-    const result = teams.find(element => element.team_id === team_id)
-    return result.name;
-  }
-  
-  function findCountry(team_id){
-    const result = teams.find(element => element.team_id === team_id)
-    return result.country;
-  }
-  
-  function findCompetition(comp_id){
-    const result = competitions.find(element => element.comp_id === comp_id)
-    return result.name;
-  }
   
   for (const stat of ronaldoStats) {
     let seasonYear = stat.season.split('-')[0];
