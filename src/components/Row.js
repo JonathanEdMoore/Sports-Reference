@@ -1,5 +1,5 @@
 import React from 'react';
-import stats, { filter, find } from '../data/stats';
+import stats from '../data/stats';
 import teams from '../data/teams';
 import people from '../data/people';
 import competitions from '../data/competitions'
@@ -22,7 +22,7 @@ function Row() {
     const result = competitions.find(element => element.comp_id === comp_id)
     return result.name;
   }
-  
+
   let cristiano = people[1];
   let personID = cristiano.person_id;
   let birthyear = cristiano.birth_date.split('-')[0]
